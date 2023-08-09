@@ -31,8 +31,8 @@
 <!-- Facebook Meta Tags -->
 <meta property="og:type" content=OG_TYPE>
 <meta property="og:title" content=OG_TITLE>
-<meta property="og:description" content=OG_DECRIPTION>
-<meta property="og:image" content=OG_IMAGE>
+<meta property="og:description" content=OG_DESCRIPTION>
+<meta property="og:image" content=OG_MAGE>
 <meta property="og:url" content=OG_URL>
 
 <!-- Twitter Meta Tags -->
@@ -48,10 +48,10 @@
    {
        "@context":"http://schema.org",
        "@type":"WebPage",
-       "url":"http://c910aae.grapedrop.net",
+       "url":https://www.shopiana.in,
        "description":DESCRIPITION,
-       "name":"Grapedrop Template - Gochisō",
-       "image":"https://cdn.grapedrop.com/uebe33058c580403ba062418fd8e8e3df/p230e0786c7e84d739086e25c8ebf5cde/ogimage.jpeg?1669450309"
+       "name":Shopiana Template ,
+       "image":https://www.shopiana.in/assets/imgs/slider/logo/shopiana_dark_logo_2.png
    }
 </script>
 
@@ -74,6 +74,76 @@
 </head>
 		<html>
  <head></head>
- <body id="ijx4"></body>
+ <body id="ijx4">
+  <div class="container">
+   <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
+    <div class="col">
+     <form id="iwlg">
+      <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Email address</label><input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" class="form-control">
+       <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+       </div>
+      </div>
+      <div class="mb-3">
+       <label for="exampleInputPassword1" class="form-label">Password</label><input type="password" id="exampleInputPassword1" class="form-control">
+      </div>
+      <div class="mb-3 form-check">
+       <input type="checkbox" id="exampleCheck1" class="form-check-input"><label for="exampleCheck1" class="form-check-label">Check me out</label>
+      </div><button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+    </div>
+   </div>
+  </div>
+  <script>var props = {"iwlg":{"name":"registrationForm","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/801/form/formData?store=mi","emailenable":false}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function ({ name, target, method, url, emailenable }) {
+        console.log(target, method, name, url);
+        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
+        if (name) {
+            const form = this;
+            this.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the default form submission
+                // Create a new FormData object
+                const formData = new FormData(form);
+                formData.append('emailEnabled', emailenable);
+                formData.append('formName', name);
+                // Perform an API call using fetch and Promises
+                fetch(url, {
+                    method: 'POST',
+                    // headers: {
+                    //     'Content-Type': 'application/json',
+                    // },
+                    body: formData,
+                })
+                    .then(response => {
+                    if (response.ok) {
+                        // API call successful
+                        return response.json();
+                    }
+                    else {
+                        // API call failed
+                        throw new Error('API call failed');
+                    }
+                })
+                    .then(responseData => {
+                    console.log('API response:', responseData);
+                    // Your custom script logic here
+                })
+                    .catch(error => {
+                    console.error('Error during API call:', error);
+                });
+            });
+            // }
+        }
+        else {
+            console.log('somthing went wrong');
+        }
+    }.bind(el))(props[el.id]);
+          }</script>
+ </body>
 </html>
 </html>
