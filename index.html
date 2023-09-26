@@ -10,7 +10,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-   <title>TITLE</title>
+   <title>MI</title>
 
 <meta name="description" content=DESCRIPTION>
 <meta name="generator" content=META_GENERATOR>
@@ -18,11 +18,11 @@
 <!-- Apple Stuff -->
 <meta name="apple-mobile-web-app-capable" content=APPLE_MOBILE_WEB_APP_CAPABLE>
 <meta name="apple-mobile-web-app-status-bar-style" content=APPLE_MOBILE_WEB_APP_STATUS_BAR_STYLE>
-<meta name="apple-mobile-web-app-title" content=APPLE_MOBILE_WEB_APP_TITLE>
+<meta name="apple-mobile-web-app-title" content=APPLE_TITLE>
 
 <!-- Google / Search Engine Tags -->
 <meta itemprop="name" content=Name>
-<meta itemprop="description" content=ITEMPROP_DECRIPTION>
+<meta itemprop="description" content=ITEMPROP_DESCRIPTION>
 <meta itemprop="image" content=ITEMPROP_IMAGE>
 
 <!-- MS Tile - for Microsoft apps-->
@@ -37,9 +37,14 @@
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content=TWITTER_CARD>
-<meta name="twitter:title" content=TWITTER_TITLE>
-<meta name="twitter:description" content=TWITTER_DESCRIPTION>
+<meta name="twitter:title" content=Twitter title>
+<meta name="twitter:description" content=Twitter Discription>
 <meta name="twitter:image" content=TWITTER_IMAGE>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Handlee&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Orbitron:wght@400;500;600;700;800;900&family=Parisienne&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Preahvihear&family=Raleway:wght@100;200;400&family=Roboto:wght@100;300;400;500;700;900&family=Satisfy&family=Tektur:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="icon" type="image/png" href="images/favicon.png">
@@ -55,7 +60,6 @@
    }
 </script>
 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:regular&amp;subset=latin&amp;display=swap"/>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular,700&amp;subset=latin&amp;display=swap"/>
  
@@ -67,82 +71,17 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}
+* { box-sizing: border-box; } body {margin: 0;}#ik3j{padding:10px;border-top:5px solid;border-right:13px double green;border-bottom:15px dotted;border-left:18px ridge brown;}
 
 </style>
 
 </head>
 		<html>
  <head></head>
- <body id="ijx4">
-  <div class="container">
-   <div class="row p-2 row-cols-1 row-cols-sm-2 row-cols-md-1">
-    <div class="col">
-     <form id="iwlg">
-      <div class="mb-3">
-       <label for="exampleInputEmail1" id="i21f" class="form-label">Email address</label><input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" name="exampleInputEmail1" class="form-control">
-       <div id="emailHelp" class="form-text">
-        We'll never share your email with anyone else.
-       </div>
-      </div>
-      <div class="mb-3">
-       <label for="exampleInputPassword1" id="i1ojg" class="form-label">Password</label><input type="password" id="exampleInputPassword1" name="exampleInputPassword1" class="form-control">
-      </div>
-      <div class="mb-3 form-check">
-       <input type="checkbox" id="exampleCheck1" class="form-check-input"><label for="exampleCheck1" class="form-check-label">Check me out</label>
-      </div><button type="submit" class="btn btn-primary">Submit</button>
-     </form>
-    </div>
-   </div>
+ <body id="ijx4" class="bg-secondary">
+  <div id="ik3j">
+   Insert your text here
   </div>
-  <script>var props = {"iwlg":{"name":"registrationForm","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/801/form/formData?store=mi","emailenable":false}};
-          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
-          var els = document.querySelectorAll(ids);
-          for (var i = 0, len = els.length; i < len; i++) {
-            var el = els[i];
-            (function ({ name, target, method, url, emailenable }) {
-        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
-        if (name) {
-            const form = this;
-            this.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent the default form submission
-                // Create a new FormData object
-                const formData = new FormData(form);
-                formData.append('emailEnabled', emailenable);
-                formData.append('formName', name);
-                // Perform an API call using fetch and Promises
-                fetch(url, {
-                    method: method,
-                    // headers: {
-                    //     'Content-Type': 'application/json',
-                    // },
-                    body: formData,
-                })
-                    .then(response => {
-                    if (response.ok) {
-                        // API call successful
-                        return response.json();
-                    }
-                    else {
-                        // API call failed
-                        throw new Error('API call failed');
-                    }
-                })
-                    .then(responseData => {
-                    console.log('API response:', responseData);
-                    // Your custom script logic here
-                })
-                    .catch(error => {
-                    console.error('Error during API call:', error);
-                });
-            });
-            // }
-        }
-        else {
-            console.log('somthing went wrong');
-        }
-    }.bind(el))(props[el.id]);
-          }</script>
  </body>
 </html>
 </html>
